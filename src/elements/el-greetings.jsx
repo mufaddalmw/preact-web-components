@@ -6,7 +6,6 @@ const Greeting = () => {
   const handleToogle = () => {
     setDisplay(!display);
   }
-  
   return (  
     <>
       {

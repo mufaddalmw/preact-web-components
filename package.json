@@ -34,6 +34,8 @@
     "preact-custom-element": "^4.2.1",
     "preactement": "^1.8.4",
     "react": "npm:@preact/compat",
-    "react-dom": "npm:@preact/compat"
+    "react-dom": "npm:@preact/compat",
+    "react-youtube": "^10.1.0",
+    "swiper": "^9.1.0"
   }
 }

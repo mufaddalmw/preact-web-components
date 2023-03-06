@@ -1,11 +1,12 @@
 import React from "react";
 import { define } from 'preactement';
-const HeroBanner = ({title}) => {
+const HeroBanner = ({title, desc, image, text}) => {
   
-  // console.log(props);
   return (
 		<>
-			<h1 className="text-2xl">{title}</h1>
+			<h1 className="text-2xl min-h-full">{title}</h1>
+			<p>{desc}</p>
+			{image}
 		</>
 	)
 }

@@ -1,3 +1,6 @@
 import "./styles.css";
-import './components/el-hero-banner.jsx'
-import './components/el-greetings.jsx'
+import './elements/el-hero-banner.jsx'
+import './elements/el-greetings.jsx'
+import './elements/el-carousel.jsx'
+import './elements/el-carousel-slides.jsx'
+import './elements/el-youtube.jsx'

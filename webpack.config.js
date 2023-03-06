@@ -9,7 +9,8 @@ module.exports = (abs, env) => {
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js'
+      filename: 'bundle.js',
+      chunkFilename: '[name].[contenthash:4].bundle.js',
     },
     module: {
       rules: [
@@ -50,6 +51,7 @@ module.exports = (abs, env) => {
       },
       compress: true,
       port: 9000,
+      open: true,
     },
     devtool: devMode ? false : 'eval',
     //...snip
@@ -60,6 +62,7 @@ module.exports = (abs, env) => {
         "react-dom": "preact/compat",     // Must be below test-utils
         "react/jsx-runtime": "preact/jsx-runtime"
       },
+      extensions: ['', '.js', '.jsx'],
     }
   };
 };
