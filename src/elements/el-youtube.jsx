@@ -4,12 +4,12 @@ import { define } from 'preactement';
 const YoutubePlr = lazy(() => import( /* webpackChunkName: "youtube-plr" */ '../components/YoutubePlr'));
 
 
-const Youtube = ({link, children}) => {
+const Youtube = (props) => {
 
-  
+  const {children} = props
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <YoutubePlr link={link}>{children}</YoutubePlr>
+      <YoutubePlr {...props}>{children}</YoutubePlr>
     </Suspense>
 	)
 }

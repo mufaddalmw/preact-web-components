@@ -1,6 +1,7 @@
 import "./styles.css";
-import './elements/el-hero-banner.jsx'
-import './elements/el-greetings.jsx'
-import './elements/el-carousel.jsx'
-import './elements/el-carousel-slides.jsx'
-import './elements/el-youtube.jsx'
+
+function importAll(r) {
+  r.keys().forEach(r);
+}
+
+importAll(require.context('./elements/', true, /\.(js|jsx)$/));

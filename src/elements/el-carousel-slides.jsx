@@ -14,5 +14,5 @@ const CarouselSlides = ({children}) => {
     </>
   )
 };
-
-define('el-carousel-slides', () => CarouselSlides);
+export default CarouselSlides
+// define('el-carousel-slides', () => CarouselSlides);

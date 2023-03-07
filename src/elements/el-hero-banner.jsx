@@ -1,5 +1,6 @@
 import React from "react";
 import { define } from 'preactement';
+
 const HeroBanner = ({title, desc, image, text}) => {
   
   return (

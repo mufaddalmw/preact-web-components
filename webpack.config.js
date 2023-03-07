@@ -16,8 +16,13 @@ module.exports = (abs, env) => {
       rules: [
         {
           test: /\.(js|jsx)$/,
-          use: 'babel-loader',
-          exclude: /node_modules/
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react']
+            }
+          }
         },
         {
           test: /\.css$/,
@@ -62,7 +67,7 @@ module.exports = (abs, env) => {
         "react-dom": "preact/compat",     // Must be below test-utils
         "react/jsx-runtime": "preact/jsx-runtime"
       },
-      extensions: ['', '.js', '.jsx'],
+      extensions: ['.js', '.jsx'],
     }
   };
 };

@@ -1,11 +1,13 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import YouTube from 'react-youtube';
-
+import Modal from 'react-modal';
+const el = document.querySelector('body');
+Modal.setAppElement(el)
 /**
- * 
+ * YoutubePlr
  */
+
 const YoutubePlr = ({link, children}) => {
-  console.log(link, children);
   const [showVideo, setShowVideo] = useState(false)
   
   const opts = {
@@ -26,7 +28,20 @@ const YoutubePlr = ({link, children}) => {
     <>
 			<a href={link} className="ml-3 text-blue-700 hover:underline hover:text-green-700" onClick={updateState}>{children}</a>
       {showVideo && (
-        <YouTube videoId={link} opts={opts} />
+        <Modal
+        isOpen={showVideo}
+        
+        // onRequestClose={closeModal}
+        // style={customStyles}
+        className="Modal"
+        overlayClassName="Overlay"
+        >
+          
+          <button onClick={updateState}>close</button>
+          <div>I am a modal</div>
+          <YouTube videoId={link} opts={opts} />
+          <img src="images/picsum.jpg" alt="" />
+        </Modal>
       )}
 		</>
   );
