@@ -35,9 +35,10 @@ const Carousel = ({children}) => {
           
           <div class="swiper-pagination"></div>
 
-          
-          <div class="swiper-button-prev">Prev</div>
-          <div class="swiper-button-next">Next</div>
+          <div className="flex">
+            <div class="swiper-button-prev bg-slate-700 text-white w-12 h-8 rounded-lg cursor-pointer m-2 flex items-center justify-center">Prev</div>
+            <div class="swiper-button-next bg-slate-700 text-white w-12 h-8 rounded-lg cursor-pointer m-2 flex items-center justify-center">Next</div>
+          </div>
 
           
           <div class="swiper-scrollbar"></div>

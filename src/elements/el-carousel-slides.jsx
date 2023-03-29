@@ -8,9 +8,7 @@ const CarouselSlides = ({children}) => {
   
   return (  
     <>
-      <div className="text-center">
-        {children}
-      </div>
+      {children}
     </>
   )
 };
